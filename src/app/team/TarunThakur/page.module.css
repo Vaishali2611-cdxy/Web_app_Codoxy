@@ -1,0 +1,91 @@
+.wrap{
+  max-width: 1120px;
+  margin: 24px auto 56px;
+  padding: 0 20px;
+  color: var(--text);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+}
+
+/* LEFT */
+.leftCol{ display:flex; flex-direction:column; gap:24px; }
+
+.photoCard{
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.06);
+}
+.photo{ width:100%; height:auto; object-fit:cover; }
+
+.quickCard{
+  background: var(--panel);
+  border-radius:6px;
+  padding: 18px 18px 10px;
+  position: relative;
+}
+
+.quickTitle{
+  display:flex; align-items:center; gap:10px;
+  font-weight:700; margin:0 0 8px;
+}
+.accent{
+  width:4px; height:22px; border-radius:4px;
+  background: var(--accent);
+  display:inline-block;
+}
+
+.quickList{ list-style:none; margin:8px 0 4px; padding:0; }
+.quickItem{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 2px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.quickItem:last-child{ border-bottom:0; }
+.quickLabel{ font-size:14px; color:#111827; }
+
+/* RIGHT */
+.role{
+  color:#f59e0b;
+  margin:0 0 6px;
+  font-weight:600;
+}
+.name{ font-size: 28px; font-weight: 800; margin: 0 0 8px; }
+.summary{ color:#111827; line-height:1.6; margin: 0 0 20px; }
+
+.sectionTitle{ font-size: 18px; font-weight: 700; margin: 26px 0 14px; }
+
+/* Skills */
+.skillsGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+  margin-bottom: 8px;
+}
+.skillTop{
+  display:flex; align-items:center; justify-content:space-between;
+  font-weight:600; margin-bottom:8px;
+}
+.progress{ height:8px; background:#e5e7eb; border-radius:999px; overflow:hidden; }
+.progressFill{
+  height:100%;
+  background: linear-gradient(90deg, #ff6a00, #ff9342);
+  position:relative;
+}
+.knob{
+  position:absolute; right:-6px; top:50%;
+  width:14px; height:14px; transform:translateY(-50%);
+  border-radius:999px; background:#fff; border:2px solid #ff6a00;
+  box-shadow:0 1px 3px rgba(0,0,0,.12);
+}
+
+.bodyText p{ margin: 0 0 14px; color:#111827; line-height:1.75; }
+
+/* Responsive */
+@media (max-width: 1020px){
+  .grid{ grid-template-columns: 1fr; }
+}

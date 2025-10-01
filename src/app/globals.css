@@ -1,26 +1,197 @@
 @import "tailwindcss";
 
+/* ===== Base tokens ===== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg: #f6f6f6;
+  --panel: #f7f7f7;
+  --line: #ff7a1a;
+  --orange: #ff6a00;
+  --orange-2: #ff8a3d;
+  --text: #0f0f0f;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ===== Mobile safety seatbelts ===== */
+*, *::before, *::after { box-sizing: border-box; min-width: 0; }
+html, body { height: 100%; max-width: 100%; overflow-x: hidden; }
+img, video, svg { max-width: 100%; height: auto; display: block; }
+h1 { font-size: clamp(1.6rem, 6vw, 2.75rem); line-height: 1.2; }
+h2 { font-size: clamp(1.25rem, 5vw, 2rem); line-height: 1.25; }
 
+/* Keep header above content (navbar uses Tailwind for show/hide) */
+header { position: sticky; top: 0; z-index: 1000; }
+
+/* ===== Theme / body ===== */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  :root { --background: #f5ebeb; --foreground: #ededed; }
 }
-
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ===== Utilities / small components ===== */
+.text-codoxyOrange { color: #FF5733; font-weight: bold; }
+
+.contact-btn {
+  display:inline-block; padding:12px 24px; font-size:16px; font-weight:700;
+  color:#fff; background:#f27522; border:0; border-radius:25px; text-decoration:none;
+  transition: background-color .3s ease;
+}
+.contact-btn:hover { background:#a7a29b; }
+
+.section-bg { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+.bg-contain { background-color:#d6cbe8; }
+.Bottom-transition { width:100%; background-color:#0000; background-image: linear-gradient(135deg,#E76C1B 0%,#DB61102E 100%); }
+
+.icon-zoom-loop { display:inline-block; transform-origin:center; will-change:transform; animation:iconZoom 1.5s infinite; }
+@keyframes iconZoom {
+  0% { transform: scale(1); animation-timing-function: ease-out; }
+  33.333% { transform: scale(1.08); animation-timing-function: ease-in; }
+  100% { transform: scale(1); }
+}
+
+.view-button{
+  line-height:30px; display:inline-block; padding:5px 25px; font-size:16px; font-weight:700;
+  border:2px solid #fff; color:#fff; background:#FF5733; border-radius:50px; text-decoration:none;
+  transition: background-color .3s ease; margin-left:auto; box-sizing:border-box;
+}
+.view-button:hover { background:#827c7c; }
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  @keyframes scroll { to { transform: translate(calc(-50% - 0.5rem)); } }
+}
+
+.footer-main { background:#f5f3f2; color:#333; padding:40px 0 20px; font-size:14px; }
+.hover-area:hover { color:#FF5733; }
+
+.no-scrollbar::-webkit-scrollbar { display:none; }
+.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+
+.custom-card { background: linear-gradient(to bottom,#f5f5f5,#f5c4a9); border:1px solid #f7eee5cb; }
+
+/* ===== “Join Us” section ===== */
+.join-us-section {
+  background: linear-gradient(to bottom, #ffffff, #cbb9ac);
+  border-radius: 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+  max-width: 1200px;
+}
+
+.join-us-container {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 2rem;
+}
+@media (min-width: 768px) { .join-us-container { flex-direction: row; padding: 0 3rem; } }
+
+.join-us-text { flex: 2; }
+.join-us-title { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; border-left: 3px solid orange; padding-left: .5rem; }
+.join-us-description { color:#333; margin-bottom: 2rem; line-height:1.6; }
+
+.join-us-btn {
+  background:#ff6600; color:#fff; font-weight:600; margin:0 auto;
+  padding:.9rem 2rem; border-radius:50px; border:0; cursor:pointer;
+  box-shadow:0 4px 12px rgba(255,102,0,.3); transition: background .3s ease;
+}
+.join-us-btn:hover { background:#e65c00; }
+
+.join-us-image-wrapper { flex:1; display:flex; justify-content:center; align-items:center; }
+.join-us-image-border {
+  width: 240px; height: 240px; border-radius: 50%;
+  display:flex; justify-content:center; align-items:center; padding:8px;
+  background: conic-gradient(#a28a6a 0deg 200deg, #e5d9c7 250deg 360deg);
+}
+.join-us-image { border-radius:50%; width:100%; height:100%; object-fit:cover; }
+@media (max-width: 480px) { .join-us-image-border { width: 200px; height: 200px; } }
+
+/* ===== CARDS (scoped so they don't fight the contact form) ===== */
+/* Use a wrapper like <div class="cards"> … <div class="card"> */
+.cards .card { width: 100%; }
+@media (min-width: 768px)  { .cards .card { width: 45%; } }  /* 2-up */
+@media (min-width: 992px)  { .cards .card { width: 30%; } }  /* 3-up */
+@media (min-width: 1200px) { .cards .card { width: 25%; } }  /* 4-up */
+
+/* ===== CONTACT FORM LAYOUT (scoped to .wrap) ===== */
+.wrap { max-width: 1220px; margin: 48px auto; padding: 0 24px; }
+
+/* IMPORTANT: this overrides any generic .card widths above */
+.wrap .card {
+  display: grid; grid-template-columns: 1fr 420px;
+  min-height: 520px; background:#fff; border-radius:8px; overflow:hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.06); width: auto;
+}
+
+/* Left (form) */
+.formSide { background: var(--panel); padding: 36px 24px; }
+@media (min-width: 920px){ .formSide { padding: 48px 44px; } }
+
+.title {
+  font-weight: 800; font-size: clamp(26px, 3vw, 40px); line-height: 1.2;
+  margin: 0 0 28px; position: relative; padding-left: 18px; color: var(--text);
+}
+.title::before {
+  content:""; position:absolute; left:0; top:6px; width:4px; height: calc(100% - 12px);
+  background: var(--line); border-radius: 4px;
+}
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.field { margin-bottom: 24px; }
+
+input, textarea {
+  width: 100%;
+  font: 400 16px/1.2 Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  padding: 16px 18px; border: 1px solid var(--border); border-radius: 4px; background: #fff; color: var(--text);
+  outline: none; transition: box-shadow .15s ease, border-color .15s ease;
+}
+textarea { min-height: 210px; resize: vertical; }
+input::placeholder, textarea::placeholder { color:#9aa0a6; }
+input:focus, textarea:focus { border-color:#c8ccd2; box-shadow: 0 0 0 3px rgba(0,0,0,.05); }
+
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  height:54px; padding:0 28px; font-weight:700; font-size:14px; letter-spacing:.5px;
+  color:#fff; text-transform:uppercase; border:0; border-radius:28px; cursor:pointer;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-2) 100%);
+  box-shadow: 0 6px 14px rgba(255,106,0,.25); transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(255,106,0,.28); }
+.btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(255,106,0,.22); }
+
+/* Right (info) */
+.infoSide { padding: 42px 36px; background: linear-gradient(180deg, var(--orange-2) 0%, #ff9650 35%, #fff 100%); }
+.infoTitle { margin: 0 0 34px; font-weight: 800; font-size: clamp(24px, 2.4vw, 34px); }
+
+.infoRow { display:grid; grid-template-columns:54px 1fr; align-items:start; gap:16px; margin:20px 0 28px; }
+.icon { width:54px; height:54px; display:grid; place-items:center; }
+.label { font-weight:700; margin:0 0 6px; }
+.muted { color: var(--muted); margin:0 0 4px; }
+.email { margin:0; }
+
+/* Contact form responsive collapse */
+@media (max-width: 900px){
+  .wrap .card { grid-template-columns: 1fr; min-height: unset; }
+  .infoSide { order: -1; }
+  .grid2 { grid-template-columns: 1fr; }
+}
+
+/* Optional: if any overlay text is absolutely positioned, neutralize on phones */
+@media (max-width: 767.98px){
+  .hero [class*="absolute"], .mission [class*="absolute"],
+  .hero [class*="overlay"],  .mission [class*="overlay"],
+  .hero [style*="position:absolute"], .mission [style*="position:absolute"] {
+    position: static !important; inset: auto !important; transform: none !important; margin: .5rem 0 !important;
+  }
+}
+
+/* Contact form background */
+.contact-form { background: #f0f1f2; }
+
+/* Extra small reset repeated (ok to keep) */
+:root { --text:#0f172a; --muted:#6b7280; --border:#e5e7eb; --panel:#f3f4f6; --accent:#ff7a1a; }
+
+
