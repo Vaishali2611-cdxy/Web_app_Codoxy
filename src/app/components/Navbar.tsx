@@ -17,7 +17,7 @@ function Navbar({ className }: { className?: string }) {
   ];
 
   return (
-    <header className={`sticky top-0 z-50 bg-gray-100/90 backdrop-blur border-b text-black ${className ?? ""}`}>
+    <header className={`sticky top-0 z-50 bg-gray-100/90 backdrop-blur  text-black ${className ?? ""}`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -32,7 +32,7 @@ function Navbar({ className }: { className?: string }) {
         </Link>
 
         {/* Desktop menu */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-bold">
+        <nav className="hidden md:flex items-center gap-8 text-xl font-bold">
           {menu.map((m) => (
             <Link key={m.href} href={m.href} className="hover:text-orange-600 transition-colors">
               {m.label}

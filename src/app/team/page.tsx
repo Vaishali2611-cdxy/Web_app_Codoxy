@@ -121,13 +121,13 @@ const teamMembers = [
       " .NET Developer with 3 years of experience in ASP.NET Core, REST APIs, EF Core, MVC, and SQL Server.I also have hands-on expertise in React.js and Microsoft Azure for building scalable applications.",
   },
   {
-    name: "",											
-    role: "Naman Jagtap",
-    image: "/team/Yash.pg",
-    linkedin: "https://www.linkedin.com/in/yash-verma-761774167/",
+    name: "Naman Jagtap",											
+    role: "Associate Software Developer",
+    image: "/team/Naman-1.png",
+    linkedin: "https://www.linkedin.com/in/naman-jagtap-1688891ba/",
     profileUrl: "team/#",
     about:
-      "Experienced Software Engineer with 3+ years in ReactJS & NodeJS. Expert in Agile methodology, API development, and AWS cloud solutions.",
+      "Software developer skilled in .NET, React, Next.js, SQL Server, and Azure, delivering performant, scalable, and secure applications.Key contributor across design–development–deployment, with impactful work on WCSS and BWW. Strong problem-solving and cross-functional collaboration, focused on high-quality, reliable outcomes.",
   },
   {
     name: "Pawan Singh",											

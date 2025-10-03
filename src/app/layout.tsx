@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   description: "We provide world-class solutions to grow your business.",
 };
 
+export const metadataIcon = { icons: { icon: '/favicon.ico' } };
+
 export default function RootLayout({
   children,
 }: Readonly<{
