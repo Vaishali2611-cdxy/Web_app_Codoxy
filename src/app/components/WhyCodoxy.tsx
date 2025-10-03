@@ -14,7 +14,7 @@ export default function WhyCodoxy() {
             cutting-edge technology and unmatched expertise.
           </p>
           <a
-            href="/Contact"
+            href="/contact"
             className="text-orange-600 font-semibold flex items-center gap-2 hover:underline"
           >
             CONTACT US <span>&#8250;</span>

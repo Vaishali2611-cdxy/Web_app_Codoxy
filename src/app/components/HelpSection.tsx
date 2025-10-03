@@ -20,7 +20,7 @@ export default function HelpSection() {
 
         {/* Button */}
         <button
-          onClick={() => router.push("/Contact")}
+          onClick={() => router.push("/contact")}
           className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow transition"
         >
           CONTACT US
