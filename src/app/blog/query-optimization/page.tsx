@@ -125,17 +125,17 @@ export default function AzureAppServices() {
                     <h3 className="text-xl font-semibold mt-6 mb-2">Viewing the Execution Plan</h3>
                     <p className="mb-4 text-gray-700">In SQL Server, you can view the execution plan using the EXPLAIN keyword:</p>
                     <pre className="bg-gray-100 p-4 rounded mb-6 overflow-x-auto">
-                        EXPLAIN SELECT * FROM employees WHERE department = 'Sales';
+                      {`EXPLAIN SELECT * FROM employees WHERE department = 'Sales';`}
                     </pre>
 
                     <p className="mb-4 text-gray-700">For MySQL:</p>
                     <pre className="bg-gray-100 p-4 rounded mb-6 overflow-x-auto">
-                        EXPLAIN SELECT * FROM employees WHERE department = 'Sales';
+                       {`EXPLAIN SELECT * FROM employees WHERE department = 'Sales';`} 
                     </pre>
 
                     <p className="mb-4 text-gray-700">In PostgreSQL:</p>
                     <pre className="bg-gray-100 p-4 rounded mb-6 overflow-x-auto">
-                        EXPLAIN ANALYZE SELECT * FROM employees WHERE department = 'Sales';
+                       {`EXPLAIN ANALYZE SELECT * FROM employees WHERE department = 'Sales';`} 
                     </pre>
 
                     {/* Key Elements */}

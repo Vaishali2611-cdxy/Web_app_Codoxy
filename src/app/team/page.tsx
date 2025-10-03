@@ -1,11 +1,7 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper/modules";
-import { useRef } from "react";
-import { NavigationOptions } from "swiper/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -58,6 +54,15 @@ const teamMembers = [
       "Experienced Software Engineer with 8+ years in ReactJS development. Skilled in Agile methodology, frontend performance, and cloud solutions.",
   },
   {
+    name: "Megha Goyal",											
+    role: "Sr. Quality Analyst",
+    image: "/team/Megha.png",
+    linkedin: "https://www.linkedin.com/in/megha",
+    profileUrl: "team/#",
+    about:
+      "I am a Senior Quality Analyst with 5.7 years of experience in Manual Testing. My expertise includes ensuring software quality through well-designed test cases, execution, and effective defect reporting.",
+  },
+  {
     name: "Ankit Thakur",
     role: "Associate Technology",
     image: "/team/Ankit.png",
@@ -84,15 +89,7 @@ const teamMembers = [
     about:
       "Software developer with 3.5 years of experience in building scalable and efficient web applications. Specialized in ReactJS, JavaScript, Redux, and NodeJS, with hands-on experience developing dynamic front-end interfaces and integrating back-end services to deliver seamless user experiences.",
   },  
-  {
-    name: "Megha Goyal",											
-    role: "Sr. Quality Analyst",
-    image: "/team/Megha.png",
-    linkedin: "https://www.linkedin.com/in/megha",
-    profileUrl: "team/#",
-    about:
-      "I am a Senior Quality Analyst with 5.7 years of experience in Manual Testing. My expertise includes ensuring software quality through well-designed test cases, execution, and effective defect reporting.",
-  },
+  
   {
     name: "Ishita Verma",
     role: "Associate Software Developer",
@@ -175,7 +172,7 @@ export default function Team() {
                   alt={m.name || "Team member"}
                   fill
                   sizes="(min-width:1024px) 160px, (min-width:640px) 128px, 112px"
-                  className="object-cover icon-zoom-loop"
+                  className="object-cover"
                   priority={idx < 2}
                 />
               </div>
