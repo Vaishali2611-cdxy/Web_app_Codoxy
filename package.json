@@ -7,13 +7,12 @@
     "build": "next build ",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "npx --yes lightningcss --version || npm install lightningcss"
+    "postinstall": "npm rebuild @tailwindcss/oxide || true"
   },
   "dependencies": {
     "@uploadthing/react": "^7.3.3",
     "bootstrap": "^5.3.8",
     "clsx": "^2.1.1",
-    "lightningcss": "^1.30.2",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.15",
     "next": "^15.1.4",
@@ -29,16 +28,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/nodemailer": "^7.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.11",
     "typescript": "^5"
   }
 }
