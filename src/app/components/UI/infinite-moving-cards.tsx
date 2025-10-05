@@ -39,7 +39,7 @@ export const InfiniteMovingCards = ({
     }
   }, [speed]);
 
-  // ✅ make stable + prevent re-clone
+
   const addAnimation = useCallback(() => {
     if (!containerRef.current || !scrollerRef.current) return;
 
@@ -57,7 +57,7 @@ export const InfiniteMovingCards = ({
     setStart(true);
   }, [getDirection, getSpeed]);
 
-  // ✅ depend on stable function
+ 
   useEffect(() => {
     addAnimation();
   }, [addAnimation]);
