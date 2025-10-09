@@ -1,11 +1,7 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper/modules";
-import { useRef } from "react";
-import { NavigationOptions } from "swiper/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -175,7 +171,7 @@ export default function Team() {
                   alt={m.name || "Team member"}
                   fill
                   sizes="(min-width:1024px) 160px, (min-width:640px) 128px, 112px"
-                  className="object-cover icon-zoom-loop"
+                  className="object-cover"
                   priority={idx < 2}
                 />
               </div>

@@ -2,11 +2,9 @@
 
 import { FaCheckCircle, FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 
 export default function ProductDevelopmentPage() {
-    const router = useRouter();
     
   return (
     <main className="bg-white">

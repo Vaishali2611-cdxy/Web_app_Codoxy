@@ -1,7 +1,6 @@
 // components/Hero.tsx
 import Image from "next/image";
 import Services from "./Services/page";
-import Button from 'react-bootstrap/Button';
 import WhyCodoxy from "./components/WhyCodoxy";
 import { ClientsSpeak } from "./components/Clients-speak";
 import { Brands } from "./components/Brands";
@@ -26,7 +25,7 @@ export default function Home() {
           </p>
 
         <div className="flex items-center gap-4">
-          <a href="/Contact" className="contact-btn">
+          <a href="/contact" className="contact-btn">
             CONTACT US
           </a>
         </div>
