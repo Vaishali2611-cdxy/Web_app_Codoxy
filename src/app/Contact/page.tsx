@@ -26,7 +26,6 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       }).then(async (res) => {
         if (!res.ok) {
-          // try to surface server error text if any
           const msg = (await res.text()) || "Request failed";
           throw new Error(msg);
         }
