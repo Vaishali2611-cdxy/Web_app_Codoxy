@@ -122,7 +122,7 @@ export default function Footer() {
                 behavior: "smooth",
                 })
             }
-            className="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition"
+            className="fixed bottom-3 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition"
             >
             <ArrowUp size={22} />
             </button>

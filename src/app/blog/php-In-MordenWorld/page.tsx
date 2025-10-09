@@ -10,7 +10,7 @@ const posts = [
     category: "Development, IT Technology",
     excerpt:
       "Azure App Services is a fully managed platform-as-a-service (PaaS) that enables developers to build, deploy, and scale web apps, mobile apps, and RESTful APIs. It’s a powerful and flexible...",
-    image: "/blogs/azure.png",
+    image: "/blog/azure.png",
   },
   {
     title: "Mastering Query Optimization: An In-Depth Guide",
@@ -20,7 +20,7 @@ const posts = [
     category: "IT Technology",
     excerpt:
       "Query optimization is a critical aspect of database management, ensuring that your SQL queries run efficiently and your applications perform at their best...",
-    image: "/blogs/query.png",
+    image: "/blog/query.png",
   },
   {
     title: "PHP in Modern World",
@@ -30,7 +30,7 @@ const posts = [
     category: "IT Technology",
     excerpt:
       "PHP, once the dominant server-side scripting language, has faced its fair share of criticism over the years. However, it remains a cornerstone of web development...",
-    image: "/blogs/php.jpg",
+    image: "/blog/php.jpg",
   },
   {
     title: "Context Hook in ReactJS",
@@ -40,7 +40,7 @@ const posts = [
     category: "Technology",
     excerpt:
       "Understanding the Context Hook in ReactJS has revolutionized front-end development with its component-based architecture and powerful hooks...",
-    image: "/blogs/context.jpg",
+    image: "/blog/context.jpg",
   },
   {
     title: "WordPress Website",
@@ -50,7 +50,7 @@ const posts = [
     category: "IT Technology",
     excerpt:
       "Creating a website on WordPress is an excellent way to establish an online presence, whether for a blog, a business, or a personal portfolio...",
-    image: "/blogs/wordpress.jpg",
+    image: "/blog/wordpress.jpg",
   },
   {
     title: "Future of ReactJS",
@@ -60,7 +60,7 @@ const posts = [
     category: "Technology",
     excerpt:
       "The Future of ReactJS, Trends and Predictions. ReactJS has been a dominant force in the world of front-end development since its release by Facebook in 2013...",
-    image: "/blogs/future-react.jpg",
+    image: "/blog/future-react.jpg",
   },
 ];
 export default function phpInMordenWorld() {

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { InfiniteMovingCards } from "./UI/infinite-moving-cards";
 
 export function ClientsSpeak() {

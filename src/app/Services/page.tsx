@@ -19,7 +19,7 @@ export default function Services() {
         {/* Left Side Image */}
         <div className="flex justify-center lg:justify-start">
           <Image
-            src="/target.png" // place your image inside public/target.png
+            src="/target.png" 
             alt="Target"
             width={400}
             height={400}
@@ -32,7 +32,7 @@ export default function Services() {
           {/* Card 1: Product Development */}
           <div className="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition">
             <Image
-              src="/proDev.png" // replace with your own icon
+              src="/services/proDev.png" 
               alt="Product Development"
               width={90}
               height={90}
@@ -61,7 +61,7 @@ export default function Services() {
           {/* Card 2: Quality Assurance */}
           <div className="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:shadow-xl transition">
             <Image
-              src="/QA.jpg" // replace with your own icon
+              src="/services/QA.jpg"
               alt="Quality Assurance"
               width={90}
               height={90}
@@ -88,7 +88,7 @@ export default function Services() {
           {/* Card 3: Support & Maintenance */}          
           <div className="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-3 hover:shadow-xl transition">
             <Image
-              src="/Support.jpg" // replace with your own icon
+              src="/services/Support.jpg" // replace with your own icon
               alt="Support & Maintenance"
               width={90}
               height={90}

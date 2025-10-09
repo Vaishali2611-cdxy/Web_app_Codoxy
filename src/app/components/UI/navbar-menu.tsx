@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { motion, type Transition } from "framer-motion";
+import { motion, type Transition } from "framer-motion"; // ✅ Correct import
 import Image from "next/image";
-import Link from "next/link";
 
 // Common transition settings
 const transition: Transition = {
@@ -87,16 +86,14 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <div>
-    <Link href={href} className="flex space-x-2">
-    <Image
-      src={src}
-      alt={title}
-      width={140}
-      height={70}
-      className="shrink-0 rounded-md shadow-2xl"
-      priority
-    />
+    <a href={href} className="flex space-x-2">
+      <Image
+        src={src}
+        width={140}
+        height={70}
+        alt={title}
+        className="shrink-0 rounded-md shadow-2xl"
+      />
       <div>
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
           {title}
@@ -113,11 +110,10 @@ type HoveredLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   className?: string;
 };
 
-export const HoveredLink: React.FC<React.PropsWithChildren<HoveredLinkProps>> = ({
+export const HoveredLink = ({
   children,
-  className = "",
   ...rest
-}) => {
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return (
     <a
       {...rest}

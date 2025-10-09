@@ -32,7 +32,7 @@ function Navbar({ className }: { className?: string }) {
         </Link>
 
         {/* Desktop menu */}
-        <nav className="hidden md:flex items-center gap-8 text-xl ">
+        <nav className="hidden md:flex items-center gap-8 ">
           {menu.map((m) => (
             <Link key={m.href} href={m.href} className="hover:text-orange-600 transition-colors">
               {m.label}

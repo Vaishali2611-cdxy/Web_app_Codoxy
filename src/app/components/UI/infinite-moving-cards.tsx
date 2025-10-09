@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/utils";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback} from "react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -30,37 +30,30 @@ export const InfiniteMovingCards = ({
 
   const getSpeed = useCallback(() => {
     if (!containerRef.current) return;
-    if (speed === "fast") {
-      containerRef.current.style.setProperty("--animation-duration", "20s");
-    } else if (speed === "normal") {
-      containerRef.current.style.setProperty("--animation-duration", "40s");
-    } else {
-      containerRef.current.style.setProperty("--animation-duration", "80s");
-    }
+    let duration = "40s";
+    if (speed === "fast") duration = "20s";
+    else if (speed === "slow") duration = "80s";
+    containerRef.current.style.setProperty("--animation-duration", duration);
   }, [speed]);
 
-
+  // ✅ Wrap addAnimation in useCallback to fix dependency
   const addAnimation = useCallback(() => {
     if (!containerRef.current || !scrollerRef.current) return;
 
-    // duplicate children only once
-    if (!scrollerRef.current.dataset.cloned) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-      scrollerContent.forEach((item) => {
-        scrollerRef.current!.appendChild(item.cloneNode(true));
-      });
-      scrollerRef.current.dataset.cloned = "1";
-    }
+    const scrollerContent = Array.from(scrollerRef.current.children);
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      scrollerRef.current?.appendChild(duplicatedItem);
+    });
 
     getDirection();
     getSpeed();
     setStart(true);
   }, [getDirection, getSpeed]);
 
- 
   useEffect(() => {
     addAnimation();
-  }, [addAnimation]);
+  }, [addAnimation]); 
 
   return (
     <div
