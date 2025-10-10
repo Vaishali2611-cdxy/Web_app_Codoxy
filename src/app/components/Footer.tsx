@@ -53,7 +53,7 @@ export default function Footer() {
                 { name: "About", href: "/about" },
                 { name: "Blog", href: "/blog" },
                 { name: "Team", href: "/team" },
-                { name: "Contact", href: "/contact" },
+                { name: "Contact", href: "/cont" },
                 { name: "Career", href: "/career" },
                 ].map((link) => (
                 <li key={link.name} className="flex items-center gap-3 mb-4">

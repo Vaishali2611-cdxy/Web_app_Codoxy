@@ -25,7 +25,7 @@ export default function Home() {
           </p>
 
         <div className="flex items-center gap-4">
-          <a href="/contact" className="contact-btn">
+          <a href="/cont" className="contact-btn">
             CONTACT US
           </a>
         </div>

@@ -12,9 +12,8 @@ function Navbar({ className }: { className?: string }) {
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
     { href: "/team", label: "Team" },
-    { href: "/contact", label: "Contact" }, // make sure route casing matches your folder
     { href: "/career", label: "Career" },
-    { href: "/cont", label: "Cont" },
+    { href: "/cont", label: "Contact" },
   ];
 
   return (
