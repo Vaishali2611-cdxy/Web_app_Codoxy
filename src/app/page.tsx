@@ -36,7 +36,7 @@ export default function Home() {
           <div className="relative w-80 h-80 md:w-[420px] md:h-[420px]">
             {/* <div className="absolute inset-0 rounded-full border-4 border-dashed border-orange-200 animate-pulse/10" /> */}
             <Image
-              src="/hero.webp"
+              src="/Hero.webp"
               alt="Teamwork"
               fill
               sizes="(min-width: 768px) 420px, 280px"
