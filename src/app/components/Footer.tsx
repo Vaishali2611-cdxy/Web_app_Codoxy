@@ -80,7 +80,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="flex items-center gap-3">
-              <Image src="/blog/query.png" alt="Post 2" width={70} height={150} className="rounded" />
+              <Image src="/blog/query.png" alt="Post 2" width={90} height={150} className="rounded" />
               <Link href="/blog/query-optimization" className="hover-area">
                 Mastering Query Optimization: An In-Depth Guide
               </Link>

@@ -37,7 +37,7 @@ export default function Careers() {
       </section>
 
       {/* Application Form */}
-      <section className="bg-gradient-to-b from-white to-orange-50 py-8 sm:py-12">
+      <section className="bg-gradient-to-b from-white to-orange-50 py-8 sm:py-12 mb-5">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="italic text-gray-700/90 max-w-3xl mb-6 sm:mb-8">
             Fill out the form below to apply for a position with us. We look forward to learning

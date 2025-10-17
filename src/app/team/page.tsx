@@ -11,7 +11,7 @@ const teamMembers = [
     name: "Pankaj Sharma",
     role: "Global Delivery Manager",
     image: "/team/Pankaj.png",
-    linkedin: "https://www.linkedin.com/in/niraj",
+    linkedin: "https://www.linkedin.com/in/pankajsharma987/",
     profileUrl: "team/PankajSharma",
     about:
       "Experienced IT Consultant with 15 years of expertise in project management, agile implementation, and QA automation. Passionate about technology and fostering inclusive work environments.",
@@ -20,7 +20,7 @@ const teamMembers = [
     name: "Tarun Thakur",
     role: "Technology Lead",
     image: "/team/Tarun.png",
-    linkedin: "https://www.linkedin.com/in/niraj",
+    linkedin: "https://www.linkedin.com/in/tarun-thakur-8b688352/",
     profileUrl: "team/TarunThakur",
     about:
       "Experienced Software Engineer with 8+ years in ReactJS and front-end technologies. Skilled in Agile methodology, developing scalable components, and managing deliverables in tight deadlines.",
@@ -29,17 +29,17 @@ const teamMembers = [
     name: "Rajiv Shrivastava",
     role: "Sr. Associate Technology",
     image: "/team/rajiv.webp",
-    linkedin: "https://www.linkedin.com/in",
+    linkedin: "https://www.linkedin.com/in/rajiv-shrivastav-599b839b/",
     profileUrl: "team/RajivShrivastava",
     about:
-      "I love application programming and web development. I'm passionate about travel, a food lover, and a yoga enthusiast.",
+      "Senior Associate – Technology with 8.5 years of experience in application programming and web development. Skilled in JavaScript, React, UI design, HTML, CSS, Git, and CI/CD pipelines, Rajiv excels at building responsive and user-focused solutions while collaborating effectively in Agile environments.",
   },
   
   {
     name: "Niraj Yadav",
     role: "Sr. Associate Technology",
     image: "/team/Niraj.png",
-    linkedin: "https://www.linkedin.com/in/niraj",
+    linkedin: "https://www.linkedin.com/in/niraj-yadav-478a1b11b/",
     profileUrl: "team/#",
     about:
       "Software Engineer with 8+ years of experience in ReactJS, React Native, and NodeJS. Skilled in Agile methodology, API development, and third-party integrations.",
@@ -48,16 +48,34 @@ const teamMembers = [
     name: "Raghvendra Roy",
     role: "Associate Software Developer",
     image: "/team/Rahgvendra.png",
-    linkedin: "https://www.linkedin.com/in/niraj",
+    linkedin: "https://www.linkedin.com/in/raghvendra-roy-14120922b/",
     profileUrl: "team/#",
     about:
       "Experienced Software Engineer with 8+ years in ReactJS development. Skilled in Agile methodology, frontend performance, and cloud solutions.",
   },
   {
+    name: "Karishma Kundnani",											
+    role: "HR Manager",
+    image: "/team/Karishma.png",
+    linkedin: "https://www.linkedin.com/in/karishma-kundnani-2922941ab/",
+    profileUrl: "team/#",
+    about:
+      "HR Manager and Project Coordinator with 8+ years of experience in Human Resources, Project Coordination, and Event Management. Skilled in talent acquisition, employee engagement, and cross-functional project execution, with a strong focus on fostering collaboration, streamlining processes, and driving impactful results.",
+  }, 
+  {
+    name: "Megha Goyal",											
+    role: "Sr. Quality Analyst",
+    image: "/team/Megha.png",
+    linkedin: "https://www.linkedin.com/in/megha",
+    profileUrl: "team/#",
+    about:
+      "A Senior Quality Analyst with 5.7 years of experience in Manual Testing, specializing in designing and executing effective test cases and ensuring software quality through precise defect reporting.",
+  },
+  {
     name: "Ankit Thakur",
     role: "Associate Technology",
     image: "/team/Ankit.png",
-    linkedin: "https://www.linkedin.com/in/ankit",
+    linkedin: "https://www.linkedin.com/in/ankit-thakur-4b4bb2160/",
     profileUrl: "team/#",
     about:
       "Software Engineer with 4+ years in ReactJS and NodeJS. Proficient in Agile methodology, API development, and AWS cloud solutions. Strong communication and problem-solving skills.",
@@ -66,7 +84,7 @@ const teamMembers = [
     name: "Harsh Malviya",
     role: "Associate Technology",
     image: "/team/Harsh.png",
-    linkedin: "https://www.linkedin.com/in/harsh",
+    linkedin: "https://www.linkedin.com/in/harshmalviya/",
     profileUrl: "team/#",
     about:
       "Dedicated and zeal driven Software Developer with 4+ years of experience in Full Stack development with ReactJS, typescript, NextJS, NodeJS, Express. Having analytical skills and problem solving abilities.",
@@ -75,25 +93,16 @@ const teamMembers = [
     name: "Saloni Chhaperwal",											
     role: "Associate Technology",
     image: "/team/saloni.webp",
-    linkedin: "https://www.linkedin.com/in",
+    linkedin: "https://www.linkedin.com/in/salonichhaperwal/",
     profileUrl: "team/#",
     about:
       "Software developer with 3.5 years of experience in building scalable and efficient web applications. Specialized in ReactJS, JavaScript, Redux, and NodeJS, with hands-on experience developing dynamic front-end interfaces and integrating back-end services to deliver seamless user experiences.",
-  },  
-  {
-    name: "Megha Goyal",											
-    role: "Sr. Quality Analyst",
-    image: "/team/Megha.png",
-    linkedin: "https://www.linkedin.com/in/megha",
-    profileUrl: "team/#",
-    about:
-      "I am a Senior Quality Analyst with 5.7 years of experience in Manual Testing. My expertise includes ensuring software quality through well-designed test cases, execution, and effective defect reporting.",
   },
   {
     name: "Ishita Verma",
     role: "Associate Software Developer",
     image: "/team/Ishita.png",
-    linkedin: "https://www.linkedin.com/in/ishita",
+    linkedin: "https://www.linkedin.com/in/ishita-verma-a32108256/",
     profileUrl: "team/#",
     about:
       "Experienced Software Engineer with 3+ years in ReactJS & NodeJS. Skilled in cloud solutions, API integration, and UI/UX design.",
@@ -102,7 +111,7 @@ const teamMembers = [
     name: "Yash Verma",											
     role: "Associate Software Developer",
     image: "/team/Yash.png",
-    linkedin: "https://www.linkedin.com/in/yash-verma-761774167/",
+    linkedin: "https://www.linkedin.com/in/yash-v-761774167/",
     profileUrl: "team/#",
     about:
       "Experienced Software Engineer with 3+ years in ReactJS & NodeJS. Expert in Agile methodology, API development, and AWS cloud solutions.",
@@ -111,10 +120,10 @@ const teamMembers = [
     name: "Vaishali Lalwani",											
     role: "Associate Software Developer",
     image: "/team/Vaishali.png",
-    linkedin: "https://www.linkedin.com/in/yash-verma-761774167/",
+    linkedin: "https://www.linkedin.com/in/vaishali-lalwani-99172a199/",
     profileUrl: "team/#",
     about:
-      " .NET Developer with 3 years of experience in ASP.NET Core, REST APIs, EF Core, MVC, and SQL Server.I also have hands-on expertise in React.js and Microsoft Azure for building scalable applications.",
+      " A .NET Developer with 3 years of experience in ASP.NET Core, REST APIs, EF Core, MVC, SQL Server, React.js, and Microsoft Azure. Skilled in building scalable and robust web applications.",
   },
   {
     name: "Naman Jagtap",											
@@ -129,10 +138,10 @@ const teamMembers = [
     name: "Pawan Singh",											
     role: "Associate Software Developer",
     image: "/team/Pawan.png",
-    linkedin: "www.linkedin.com/in/pawan-singh-a4b6b8225",
+    linkedin: "https://www.linkedin.com/in/pawan-singh-a4b6b8225/",
     profileUrl: "team/#",
     about:
-      "I’m a software developer who codes, travels, and loves a good chess match. Always up for an adventure, whether it’s a new project or a new place!",
+      "An Associate Software Developer with 1 year of experience, specializing in ReactJS, NextJS, NodeJS, MongoDB, and React Native. Passionate about building efficient, scalable web and mobile applications.",
   },
   {
     name: "Ayush Jadon",											

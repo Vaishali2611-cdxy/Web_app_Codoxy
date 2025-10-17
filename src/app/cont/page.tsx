@@ -20,7 +20,7 @@ export default function ContactPage() {
 
     // show loading → success/error automatically
     await toast.promise(
-      fetch("/api/cont", {
+      fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

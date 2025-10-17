@@ -18,10 +18,13 @@
 *, *::before, *::after { box-sizing: border-box; min-width: 0; }
 html, body { min-height: 100%; max-width: 100%; overflow-x: hidden; }
 img, video, svg { max-width: 100%; height: auto; display: block; }
+
+/* ===== Typography ===== */
 h1 { font-size: clamp(1.6rem, 6vw, 2.75rem); line-height: 1.2; }
 h2 { font-size: clamp(1.25rem, 5vw, 2rem); line-height: 1.25; }
+p, li { font-size: clamp(0.875rem, 2.5vw, 1rem); line-height: 1.6; }
 
-/* Keep header above content (navbar uses Tailwind for show/hide) */
+/* Keep header above content */
 header { position: sticky; top: 0; z-index: 1000; }
 
 /* ===== Theme / body ===== */
@@ -32,18 +35,72 @@ body {
   background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 /* ===== Utilities / small components ===== */
 .text-codoxyOrange { color: #FF5733; font-weight: bold; }
 
+/* ===== Contact button (untouched) ===== */
 .contact-btn {
-  display:inline-block; padding:12px 24px; font-size:16px; font-weight:700;
-  color:#fff; background:#f27522; border:0; border-radius:25px; text-decoration:none;
+  display:inline-block; 
+  padding:12px 24px; 
+  font-size:16px; 
+  font-weight:700;
+  color:#fff; 
+  background:#f27522; 
+  border:0; 
+  border-radius:25px; 
+  text-decoration:none;
   transition: background-color .3s ease;
 }
 .contact-btn:hover { background:#a7a29b; }
 
+/* ===== View, Join-us, and general buttons ===== */
+.view-button, .btn, .join-us-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+/* Specific styles */
+.view-button {
+  border:2px solid #fff;
+  color: #fff;
+  box-sizing: border-box;
+  margin-left:auto;
+  background-color: #f27522;
+}
+.view-button:hover { background:#827c7c; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(255,106,0,.28); }
+.btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(255,106,0,.22); }
+.join-us-btn:hover { background:#e65c00; }
+
+/* Mobile adjustments for view, join-us, and general buttons */
+@media (max-width: 480px){
+  .view-button, .btn, .join-us-btn {
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+    min-height: 44px;  /* ensures proper button height */
+    margin-top: auto;  /* pushes button to bottom */
+  }
+
+  /* Make container flex-column for proper stacking */
+  .card, .join-us-container, .wrap .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ===== Section & background utilities ===== */
 .section-bg { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
 .bg-contain { background-color:#d6cbe8; }
 .Bottom-transition { width:100%; background-color:#0000; background-image: linear-gradient(135deg,#E76C1B 0%,#DB61102E 100%); }
@@ -55,32 +112,15 @@ body {
   100% { transform: scale(1); }
 }
 
-.view-button{
-  line-height:30px; display:inline-block; padding:5px 25px; font-size:16px; font-weight:700;
-  border:2px solid #fff; color:#fff; background:#FF5733; border-radius:50px; text-decoration:none;
-  transition: background-color .3s ease; margin-left:auto; box-sizing:border-box;
-}
-.view-button:hover { background:#827c7c; }
-
-@theme inline {
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
-  @keyframes scroll { to { transform: translate(calc(-50% - 0.5rem)); } }
-}
-
-.footer-main { background:#f5f3f2; color:#333; padding:40px 0 20px; font-size:14px; }
-.hover-area:hover { color:#FF5733; }
-
-/* .no-scrollbar::-webkit-scrollbar { display:none; }
-.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; } */
-
-.custom-card { background: linear-gradient(to bottom,#f5f5f5,#f5c4a9); border:1px solid #f7eee5cb; }
-
 /* ===== “Join Us” section ===== */
 .join-us-section {
   background: linear-gradient(to bottom, #ffffff, #cbb9ac);
   border-radius: 0;
   box-shadow: 0 6px 20px rgba(0,0,0,.1);
+  width: 90%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .join-us-container {
@@ -90,7 +130,7 @@ body {
 @media (min-width: 768px) { .join-us-container { flex-direction: row; padding: 0 3rem; } }
 
 .join-us-text { flex: 2; }
-.join-us-title { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; border-left: 3px solid orange; padding-left: .5rem; }
+.join-us-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; margin-bottom: 1rem; border-left: 3px solid orange; padding-left: .5rem; }
 .join-us-description { color:#333; margin-bottom: 2rem; line-height:1.6; }
 
 .join-us-btn {
@@ -98,7 +138,6 @@ body {
   padding:.9rem 2rem; border-radius:50px; border:0; cursor:pointer;
   box-shadow:0 4px 12px rgba(255,102,0,.3); transition: background .3s ease;
 }
-.join-us-btn:hover { background:#e65c00; }
 
 .join-us-image-wrapper { flex:1; display:flex; justify-content:center; align-items:center; }
 .join-us-image-border {
@@ -108,18 +147,17 @@ body {
 }
 .join-us-image { border-radius:50%; width:100%; height:100%; object-fit:cover; }
 @media (max-width: 480px) { .join-us-image-border { width: 200px; height: 200px; } }
+@media (max-width: 360px) { .join-us-image-border { width: 150px; height: 150px; } }
 
-/* ===== CARDS (scoped so they don't fight the contact form) ===== */
-/* Use a wrapper like <div class="cards"> … <div class="card"> */
+/* ===== CARDS ===== */
 .cards .card { width: 100%; }
-@media (min-width: 768px)  { .cards .card { width: 45%; } }  /* 2-up */
-@media (min-width: 992px)  { .cards .card { width: 30%; } }  /* 3-up */
-@media (min-width: 1200px) { .cards .card { width: 25%; } }  /* 4-up */
+@media (min-width: 768px)  { .cards .card { width: 45%; } }  
+@media (min-width: 992px)  { .cards .card { width: 30%; } }  
+@media (min-width: 1200px) { .cards .card { width: 25%; } }
 
-/* ===== CONTACT FORM LAYOUT (scoped to .wrap) ===== */
-.wrap { max-width: 1220px; margin: 48px auto; padding: 0 24px; }
+/* ===== CONTACT FORM LAYOUT ===== */
+.wrap { max-width: 1220px; margin: 48px auto; padding: 0 1rem; }
 
-/* IMPORTANT: this overrides any generic .card widths above */
 .wrap .card {
   display: grid; grid-template-columns: 1fr 420px;
   min-height: 520px; background:#fff; border-radius:8px; overflow:hidden;
@@ -130,6 +168,7 @@ body {
 .formSide { background: var(--panel); padding: 36px 24px; }
 @media (min-width: 920px){ .formSide { padding: 48px 44px; } }
 
+/* Titles */
 .title {
   font-weight: 800; font-size: clamp(26px, 3vw, 40px); line-height: 1.2;
   margin: 0 0 28px; position: relative; padding-left: 18px; color: var(--text);
@@ -139,6 +178,7 @@ body {
   background: var(--line); border-radius: 4px;
 }
 
+/* Grid & fields */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
 .field { margin-bottom: 24px; }
 
@@ -177,9 +217,13 @@ input:focus, textarea:focus { border-color:#c8ccd2; box-shadow: 0 0 0 3px rgba(0
   .wrap .card { grid-template-columns: 1fr; min-height: unset; }
   .infoSide { order: -1; }
   .grid2 { grid-template-columns: 1fr; }
+  .formSide, .infoSide { padding: 24px 12px; }
 }
 
-/* Optional: if any overlay text is absolutely positioned, neutralize on phones */
+/* Extra small reset repeated */
+:root { --text:#0f172a; --muted:#6b7280; --border:#e5e7eb; --panel:#f3f4f6; --accent:#ff7a1a; }
+
+/* Optional: absolutely positioned overlay neutralization on phones */
 @media (max-width: 767.98px){
   .hero [class*="absolute"], .mission [class*="absolute"],
   .hero [class*="overlay"],  .mission [class*="overlay"],
@@ -190,8 +234,3 @@ input:focus, textarea:focus { border-color:#c8ccd2; box-shadow: 0 0 0 3px rgba(0
 
 /* Contact form background */
 .contact-form { background: #f0f1f2; }
-
-/* Extra small reset repeated (ok to keep) */
-:root { --text:#0f172a; --muted:#6b7280; --border:#e5e7eb; --panel:#f3f4f6; --accent:#ff7a1a; }
-
-

@@ -6,7 +6,7 @@ import React from "react";
 export default function HelpSection() {
    const router = useRouter();
   return (
-    <section className="flex items-center justify-center py-30 bg-gradient-to-b from-white to-orange-100">
+    <section className="flex items-center justify-center py-30 bg-gradient-to-b from-white to-orange-100 mb-5">
       <div className="bg-gray-100 rounded-3xl shadow-md px-8 py-12 max-w-4xl w-full text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -21,7 +21,7 @@ export default function HelpSection() {
         {/* Button */}
         <button
           onClick={() => router.push("/cont")}
-          className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow transition"
+          className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-full shadow transition"
         >
           CONTACT US
         </button>

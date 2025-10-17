@@ -49,8 +49,7 @@ export default function BlogCarousel() {
   };
 
   return (
-    // 🔳 keep whole section white
-    <section className="relative w-full bg-white py-2 ">
+    <section className="relative w-full bg-white py-2">
       {/* Left arrow */}
       <button
         aria-label="Previous"
@@ -60,20 +59,32 @@ export default function BlogCarousel() {
         ${canLeft ? "opacity-100 hover:bg-gray-50" : "opacity-40 cursor-not-allowed"}`}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path
+            d="M15 6l-6 6 6 6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 
-      {/* Track (white bg as well) */}
+      {/* Track */}
       <div
         ref={trackRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth px-20 snap-x snap-mandatory no-scrollbar bg-white ml-40 mr-40"
+        className="
+          flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar bg-white
+          px-4 sm:px-6 md:px-20 md:ml-40 md:mr-40
+        "
       >
         {blogs.map((b) => (
           <article
             key={b.slug}
-            // ⬇️ smaller cards
-            className="snap-start shrink-0 w-[340px] md:w-[380px] bg-white rounded-xl shadow-lg overflow-hidden"
+            className="
+              shrink-0 bg-white rounded-xl shadow-lg overflow-hidden
+              snap-center
+              w-[85vw] sm:w-[70vw] md:w-[340px] lg:w-[380px]
+            "
           >
             <Link href={`/blog/${b.slug}`}>
               <div className="relative w-full h-[180px] md:h-[200px]">
@@ -82,7 +93,7 @@ export default function BlogCarousel() {
                   alt={b.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 340px, 380px"
+                  sizes="(max-width: 768px) 85vw, 380px"
                 />
               </div>
             </Link>
@@ -107,7 +118,13 @@ export default function BlogCarousel() {
         ${canRight ? "opacity-100 hover:bg-gray-50" : "opacity-40 cursor-not-allowed"}`}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path
+            d="M9 6l6 6-6 6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
     </section>
